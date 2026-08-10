@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+venv/
+.venv/
+.cache/
+hf_cache/
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.png
+*.jpg
+*.csv
+.DS_Store
+.vscode/

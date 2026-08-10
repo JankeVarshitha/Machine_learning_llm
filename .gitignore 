@@ -1,0 +1,32 @@
+# === Python Caches & Compiled Files ===
+_pycache_/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# === Virtual Environments ===
+venv/
+.venv/
+env/
+ENV/
+
+# === Hugging Face Caches & Model Weights ===
+.cache/
+hf_cache/
+*.pt
+*.pth
+*.bin
+*.safetensors
+
+# === Benchmark Visuals & Outputs ===
+*.png
+*.jpg
+*.jpeg
+*.csv
+*.log
+
+# === System & IDE Configs ===
+.DS_Store
+.idea/
+.vscode/
+.env
