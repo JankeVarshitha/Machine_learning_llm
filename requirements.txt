@@ -7,3 +7,4 @@ matplotlib>=3.7.0
 transformers>=4.48.0
 safetensors>=0.4.0
 torch>=2.2.0
+statsmodels>=0.14.0
