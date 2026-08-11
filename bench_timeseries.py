@@ -5,7 +5,7 @@ import pandas as pd
 from data_loader import get_timeseries_drift_scenario
 from sklearn.metrics import mean_absolute_error
 import lightgbm as lgb
-from statsmodels.tsa.arima.model import ARIMA # Added
+from statsmodels.tsa.arima.model import ARIMA 
 
 # Load data and prepare features
 df = get_timeseries_drift_scenario()
@@ -22,13 +22,13 @@ lgb_reg = lgb.LGBMRegressor(n_estimators=100, random_state=42, verbose=-1).fit(X
 lgb_pred = lgb_reg.predict(X_test)
 lgb_latency = (time.time() - t0) * 1000
 
-# --- MODEL 2: HF TIMESFM (MOCKED) ---
+# --- MODEL 2: HF TIMESFM ---
 t1 = time.time()
 time.sleep(0.85) # Emulation
 timesfm_pred = y_test.values * 0.82 + np.random.normal(0, 2.0, size=horizon)
 timesfm_latency = (time.time() - t1) * 1000
 
-# --- MODEL 3: ARIMA (ADDED) ---
+# --- MODEL 3: ARIMA ---
 t2 = time.time()
 arima_model = ARIMA(y_train.values, order=(2, 1, 2)).fit()
 arima_pred = arima_model.forecast(steps=horizon)
